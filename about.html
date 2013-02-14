@@ -1,0 +1,121 @@
+---
+layout: default
+---
+
+<!-- header no image -->    
+<div class="header_thin">
+    <div class="container_12">       
+        <div class="head_title">
+            <strong>About</strong>
+            <div class="sub_title">A little history about Hotglue and us.</div>
+        </div>
+    
+    </div>
+</div>
+<!--/ header no image -->
+
+
+<!-- middle content -->
+<div class="middle">
+    <div class="container_12">
+        <div class="content">
+            <h1>The problems we had before Hotglue was created</h1>
+            <p>
+                Hotglue was born out of the frustration of trying to easily work with front end files in our project. In order to try and facilitate front end development, we began to experiment with a variety of available existing tools. Most of these tools worked okay, but there were several problems with them we didn't like. These problems included:
+            </p>
+            <div class="faq_question toggle">
+                <span class="faq_title">A configuration file was required</span>
+                <span class="ico"></span>
+            </div>
+            <div class="faq_answer toggle_content">
+                <p>We didn't like the fact that a separate configuration file was required and had to be manually maintained separately to tell the tool what scripts belonged to a page, and what to group and combine.</p>
+            </div>
+
+            <div class="faq_question toggle">
+                <span class="faq_title">Installing additional tools inside of Visual Studio</span>
+                <span class="ico"></span>
+            </div>
+            <div class="faq_answer toggle_content">
+                <p>Most of our team has switched to using <a href="http://www.sublimetext.com" target="_blank">Sublime Text</a> for our front end editing. We wanted to use coffee script for all new development, but didn't want to be forced to use Visual Studio to edit the files. In addition, most of the tools kept two separate files on disk, the CoffeeScript file, and the processed JavaScript file.</p>
+            </div>
+
+            <div class="faq_question toggle">
+                <span class="faq_title">Compression required post processing</span>
+                <span class="ico"></span>
+            </div>
+            <div class="faq_answer toggle_content">
+                <p>While this may not be true for all tools, the specific ones we were using required us to run a post process to compress all of our script and CSS files. We then had to update our references for the release.</p>
+            </div>
+
+            <div class="faq_question toggle">
+                <span class="faq_title">Our script files were huge</span>
+                <span class="ico"></span>
+            </div>
+            <div class="faq_answer toggle_content">
+                <p>Over time, our script files started to get thousands of lines of code. Changes and merges became more and more difficult. Trying to debug a file with thousands of lines became a chore and was difficult to follow.</p>
+            </div>
+
+            <div class="faq_question toggle">
+                <span class="faq_title">Multiple tools to meet our requirements</span>
+                <span class="ico"></span>
+            </div>
+            <div class="faq_answer toggle_content">
+                <p>As we had additional needs, we continued to bring in and use additional tools to meet them. There was more and more overhead just maintaining and updating the tools. The project work flow no longer felt simple.</p>
+            </div>
+
+            <div class="divider"></div>
+            <h1>What we wanted to solve with Hotglue</h1>
+            <p>
+                Once we hit the point where we decided to grow our own tool set, we also had an additional number of problems we wanted Hotglue to solve. We didn't just want to fix the existing tools we were using, we wanted to make Hotglue a resource to use in a variety of projects.
+            </p>
+
+            <div class="faq_question toggle">
+                <span class="faq_title">Have the files determine what files they need</span>
+                <span class="ico"></span>
+            </div>
+            <div class="faq_answer toggle_content">
+                <p>We wanted the files themselves to say what references they needed. This allowed us to quickly reference other files and treat files as a plug-in or package of files without having to specifically reference all the sub files. Just reference the main file you need, and the referenced file automatically pulls in its required files.</p>
+            </div>
+
+            <div class="faq_question toggle">
+                <span class="faq_title">Remove global variables</span>
+                <span class="ico"></span>
+            </div>
+            <div class="faq_answer toggle_content">
+                <p>Since the required files each file needed was being referenced within itself, we wanted to remove global variables and wrap each required file in a module. This helped keep the scope just to the file being worked on and its required files.</p>
+            </div>
+
+            <div class="faq_question toggle">
+                <span class="faq_title">Be able to code in different languages on the fly</span>
+                <span class="ico"></span>
+            </div>
+            <div class="faq_answer toggle_content">
+                <p>To fully take advantage of CoffeeScript, we wanted to have it translated to JavaScript on the fly. We didn't want to have to use additional plug-ins or post processing to convert the files, and we didn't want to have to keep two separate references to the same logical file, the CoffeeScript file, and the processed JavaScript file.</p>
+            </div>
+
+            <div class="faq_question toggle">
+                <span class="faq_title">Separate and organize the files to our needs</span>
+                <span class="ico"></span>
+            </div>
+            <div class="faq_answer toggle_content">
+                <p>We wanted to be able to take our huge JavaScript files, and separate them into the individual files we needed. This allowed us to make our code modularized, and also allowed us to view file history much easier.</p>
+            </div>
+
+            <div class="faq_question toggle">
+                <span class="faq_title">Automatically compress and bundle the files</span>
+                <span class="ico"></span>
+            </div>
+            <div class="faq_answer toggle_content">
+                <p>Whether we were testing locally or releasing to production, we wanted to have easy configuration options to either keep all the files separate, or bundle them together and compress them all through the same work flow.</p>
+            </div>
+            <div class="divider_thin"></div>
+            <p>Hotglue has been an amazing resource for working with our front end files. We hope you can find the same benefits and easily pull it into your projects.</p>
+
+            <div class="divider"></div>
+            <h1>A little about us</h1>
+            <p>We work for Spruce Media, a company which created a platform for interacting and managing Facebook Ads. We love developing and innovating. If you have feedback/comments, we would love to hear from you. If you want to get a hold of us, all of our contact information can be found at the bottom of the screen.</p>
+            <div class="divider_thin"></div>
+        </div>
+    </div>
+</div> 
+<!--/ middle content -->

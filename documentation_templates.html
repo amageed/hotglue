@@ -1,0 +1,47 @@
+---
+layout: documentation
+---
+
+<h1>Templates</h1>
+
+<h2>Default</h2>
+
+<p>
+    By default, Hotglue does not support any template files. If you want to support a template engine, install one or more of the template plug-ins. If you only install one template engine, all of your template files extensions can be <em>.tmpl</em>. If you install more than one template plug-in, you will need to fully qualify all of your template file extensions.
+</p>
+
+<p>
+    All template plug-ins work the same way, just save your <em>.tmpl</em> files with the template data you need. Below is a jQuery template example for displaying a list of errors (error.tmpl). 
+</p>
+
+<pre class="brush: plain">
+    <ul>
+        &#123;{each errors}}
+            <li>${name}: ${value}</li>
+        &#123;{/each}}
+    </ul>
+</pre> 
+
+<p>
+    Once you have your <em>.tmpl</em> files, all you will need to do to render a template file is call the template like a method.
+</p>
+
+<pre class="brush: javascript">
+    var errors = [{ name: "Phone", value: "Needs to be 10 digits" }, { name: "First Name", value: "It is required" }];
+    var errorTemplate = require("error.tmpl");
+    var html = errorTemplate(errors);
+</pre> 
+
+
+<div class="divider_thin"></div>
+
+<div class="text-center">
+    <span class="tf_pagination">
+        <span class="inner">
+            <a class="page_prev page-numbers" href="documentation_compilers.html">&lt; Compilers</a>
+            <a class="page_next page-numbers" href="documentation_changelog.html">Change Log &gt;</a>
+        </span>
+    </span>
+</div>
+
+<div class="divider_thin"></div>

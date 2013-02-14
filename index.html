@@ -1,0 +1,143 @@
+---
+layout: default
+---
+
+<!-- slider -->    
+<div class="header_slider">
+    <div class="container_12">
+    
+        <div class="sText" id="textSlider"> 
+                <div class="slides_container">   
+                        
+                        <div class="slide">
+                            <div class="slide-image"><img src="images/main_slider.png" alt="" width="960" height="450" border="0" /></div>
+                            <div class="slide-text-right">
+                                <div class="slide-title">
+                                    <a href="documentation.html">
+                                        Get <strong>started</strong> using Hotglue <strong>today</strong></br>
+                                        View the documentation  
+                                    </a>
+                                </div>
+                                <div class="slide-descr">
+                                  <p>Get up and running within minutes. Whether you need file dependency references, compression and bundling, or custom template engines.</p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>  
+                        
+                        <div class="slide">
+                            <div class="slide-image"><img src="images/plugin_slider.png" alt="" width="960" height="450" border="0" /></div>
+                            <div class="slide-text-left">
+                                <div class="slide-title">
+                                    <a href="plugins.html">
+                                        <strong>Expand</strong> Hotglue's functionality to meet <strong>your</strong> needs.
+                                    </a>
+                                </div>
+                                <div class="slide-descr">
+                                  <p>With a variety of plug-ins available, you can use Hotglue with different frameworks, compile various languages, or pick from the many template engines available.</p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div> 
+                </div>
+                <a href="#" class="prev">Previous</a>
+                <a href="#" class="next">Next</a>
+            </div>
+          
+            <script language="javascript" type="text/javascript" charset="utf-8">
+                $(function(){
+                    $('#textSlider').slides({
+                        play: 5000,
+                        pause: 3000,
+                        slideSpeed: 500,
+                        hoverPause: true,
+                        slideEasing: "easeOutCubic",
+                        generatePagination: false
+                    });
+                });     
+            </script> 
+    
+    </div>
+</div>
+<!--/ slider -->
+
+<!-- middle content -->
+<div class="middle">
+    <div class="container_12">
+        
+        <div class="title" id="Features">
+            <h1>Hotglue Features: <span>everything you need for your front end code!</span></h1>
+        </div>
+        
+        <!-- middle text -->
+            
+        <div class="text">
+                    
+            <div class="divider"></div>
+            
+            <div class="row">
+                <div class="col col_1_3 box_textstyle-1">
+                    <span class="icon_left"><img src="images/icons/icon_cloud_green.gif" width="72" height="72" alt="" /></span>
+                    <h2><span>File References</span> Defined within the code</h2>                  
+                    <div class="clear"></div>
+                    <p>Have each file declare the references it needs and automatically graph the dependency tree. You no longer need to manually list out every script needed to load the page, or maintain a separate configuration file.</p>
+                    <a href="documentation.html" class="link-details">View documentation</a>
+                </div>
+                
+                <div class="col col_1_3 box_textstyle-1">
+                    <span class="icon_left"><img src="images/icons/icon_secure_green.gif" width="72" height="72" alt="" /></span>
+                    <h2><span>Package Files</span> Bundle and Compress</h2>
+                    <div class="clear"></div>
+                    <p>Combine and compress multiple files for fewer HTTP requests and faster loading. When you aren't releasing, Hotglue can keep all of your files separate for easier debugging and readability.</p>
+                    <a href="documentation.html" class="link-details">View documentation</a>             
+                </div>
+                
+                <div class="col col_1_3 box_textstyle-1">
+                    <span class="icon_left"><img src="images/icons/icon_music_green.gif" width="72" height="72" alt="" /></span>
+                    <h2><span>Module Entities</span> Remove global variables</h2>
+                    <div class="clear"></div>
+                    <p>Eliminate the use of global variables throughout your JavaScript. Every reference is a self contained module that only exposes the objects or properties needed.</p>
+                    <a href="documentation.html" class="link-details">View documentation</a>
+                </div>
+
+            </div>       
+            
+            <div class="divider"></div>
+            
+            <div class="row">
+          
+                <div class="col col_1_3 box_textstyle-1">
+                    <span class="icon_right"><img src="images/icons/icon_photo_green.gif" width="72" height="72" alt="" /></span>
+                    <h3><span>Coffee Script</span> Compile to JavaScript</h3>                  
+                    <div class="clear"></div>
+                    <p>Write and code natively in coffee script and other languages, then Hotglue will translate it on the fly. Any files that haven't changed are cached for faster loading.</p>
+                    <a href="documentation.html" class="link-details">View documentation</a>
+                </div>
+                
+                <div class="col col_1_3 box_textstyle-1">
+                    <span class="icon_right"><img src="images/icons/icon_iniani_green.gif" width="72" height="72" alt="" /></span>
+                    <h3><span>More Options</span> Get plug-ins for your needs</h3>
+                    <div class="clear"></div>
+                    <p>Hotglue has a variety of plug-ins available to use. Whether you want to use Coffee Script, Nancy, or a variety of template engines, they are available now to use and install.</p>
+                    <a href="plugins.html" class="link-details">View plug-ins</a>             
+                </div>
+                
+                <div class="col col_1_3 box_textstyle-1">
+                    <span class="icon_right"><img src="images/icons/icon_favorite_green.gif" width="72" height="72" alt="" /></span>
+                  <h3><span>Feature Missing?</span> Contribute to the project</h3>
+                    <div class="clear"></div>
+                    <p>Want to use Hotglue to graph required files on a language not currently supported? Want an additional template engine not listed? Contribute by forking and adding the plug-in you need.</p>
+                    <a href="contribute.html" class="link-details">View contribute</a>
+                </div>
+                
+            </div>
+                
+            <div class="clear"></div>
+        </div>
+        <!--/ middle text -->
+        
+    </div>
+</div> 
+<!--/ middle content -->

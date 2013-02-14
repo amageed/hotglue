@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<!-- header no image -->    
+<div class="header_thin">
+    <div class="container_12">       
+        <div class="head_title">
+            <strong>Documentation</strong>
+            <div class="sub_title">Helping you glue all the pieces together.</div>
+        </div>
+    </div>
+</div>
+<!--/ header no image -->
+
+<div class="middle">
+    <div class="container_12">
+        
+        <!-- content -->
+        <div class="grid_8 content">
+            {{ content }}
+        </div>
+        <!--/ content -->
+        
+        <!-- sidebar -->
+        <div class="grid_4 sidebar">
+            
+            <!-- sidebar 1 -->
+            <div class="box sidebar_1_content">
+            
+                <div class="widget-container widget_categories">
+                    <h3 class="widget-title">Documentation:</h3>
+                    {% include doc_links.html %}
+                </div>     
+                           
+            </div>
+            <!--/ sidebar 1 -->
+        </div>    
+        <!--/ sidebar -->
+        
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+<!-- Code SyntaxHighlighter -->
+<script type="text/javascript">
+SyntaxHighlighter.defaults['toolbar'] = false;
+SyntaxHighlighter.all();
+</script>

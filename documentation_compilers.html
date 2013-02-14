@@ -1,0 +1,58 @@
+---
+layout: documentation
+---
+
+<h1>Compilers</h1>
+
+<h2>Default</h2>
+
+<p>
+    By default, Hotglue does not support any languages other than JavaScript. To expand Hotglues supported languages, you can install a compiler plug-in. Compilers look for specific file extensions to know when to process a file.
+</p>
+
+<h2>CoffeeScript</h2>
+
+<p>
+    To use CoffeeScript with Hotglue, you will need to install the plug-in and name the CoffeeScript files with the extension .coffee. As far as using Hotglue references, it is a straight cross over from the JavaScript references.
+</p>
+
+<pre class="brush: javascript">
+    # Library reference
+    #= library("jQuery.js")
+
+    # The standard require reference path
+    #= require("dialog.js")
+    # or
+    #= require('dialog.js')
+
+    # Referencing a require without quotes
+    #= require dialog.js
+
+    # Require a file and use it as a variable on the page
+    popup = require("plugins/popup.js")
+
+    # Require a file and use it for an object on the page
+    helpers = {
+        validations: require("contants.js").validations,
+        message: require("contants.js").messages
+    }
+</pre> 
+
+<h2>TypeScript</h2>
+
+<p>
+    Since TypeScript is a superset of JavaScript, all of the Hotglue references work the exact same as they do for JavaScript. The only difference is TypeScript files end with the extension of <em>.ts</em> rather than <em>.js</em>.
+</p>
+
+<div class="divider_thin"></div>
+
+<div class="text-center">
+    <span class="tf_pagination">
+        <span class="inner">
+            <a class="page_prev page-numbers" href="documentation_script_references.html">&lt; Script References</a>
+            <a class="page_next page-numbers" href="documentation_templates.html">Templates &gt;</a>
+        </span>
+    </span>
+</div>
+
+<div class="divider_thin"></div>

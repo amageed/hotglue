@@ -1,0 +1,78 @@
+---
+layout: documentation
+---
+
+<h1>Plug-ins</h1>
+
+<p>
+    Through installing plug-ins, you are able to extend the base functionality of Hotglue to meet your needs. There are five different types of plug-ins available to install. For additional information on the plug-ins, and specific configuration information click the learn more below each section for additional information.
+</p>
+
+<h2>Frameworks</h2>
+
+<p>
+    Hotglue's only required component is a framework. It's through a framework that Hotglue is executed and prepares the scripts. The first thing you need to install to get Hotglue to run is the framework. Once the framework is installed, any of the remaining plug-ins can be installed in any order.
+</p>
+
+<p>
+    <a href="documentation_frameworks.html">Learn more about specific frameworks</a>
+</p>
+
+<h2>Compressors</h2>
+
+<p>
+    By default, Hotglue loads all of your files as is. With the debug option set to false, Hotglue will bundle all the referenced files into one, but the bundled file will still be uncompressed. If you want to add additional compression, you can install one of the compressor plug-ins to minimize file size. The compressor only runs when the debug option is set to false.
+</p>
+
+<p>
+    <a href="documentation_compressors.html">Learn more about compressor options</a>
+</p>
+
+<h2>Script References</h2>
+
+<p>
+    To expand the default way Hotglue loads the required reference files, you can install a script reference plug-in. These plug-ins don't expand any base functionality, they are focused solely on changing how files are loaded from the HTML page.
+</p>
+
+<p>
+    <a href="documentation_script_references.html">Learn more about script reference options</a>
+</p>
+
+<h2>Compilers</h2>
+
+<p>
+    Hotglue provides the ability to expand the languages available to program in. Through the compiler plug-ins, Hotglue will build and compile the alternate language files on the fly. Once a file has been compiled, Hotglue will cache the file to serve it up faster, until it is changed again. 
+</p>
+
+<p>
+    <a href="documentation_compilers.html">Learn more about compiler options</a>
+</p>
+
+<h2>Templates</h2>
+
+<p>
+    To abstract any template files from your HTML and from your scripts, Hotglue provides template plug-ins to help simplify the use and storage of these template engines. Every template works the same, in that all you need to do is execute the required template variable. To execute the template, call the variable as a method and pass in any template variables. The template will have already been configured, and will return a string generated from the template engine.  
+</p>
+
+<pre class="brush: javascript">
+    var template = require("template.tmpl");
+    var data = { name: "Bob", age: 25 };
+    var html = template(data);
+</pre> 
+
+<p>
+    <a href="documentation_templates.html">Learn more about template options</a>
+</p>
+
+<div class="divider_thin"></div>
+
+<div class="text-center">
+    <span class="tf_pagination">
+        <span class="inner">
+            <a class="page_prev page-numbers" href="documentation_components.html">&lt; Components</a>
+            <a class="page_next page-numbers" href="documentation_changelog.html">Change Log &gt;</a>
+        </span>
+    </span>
+</div>
+
+<div class="divider_thin"></div>

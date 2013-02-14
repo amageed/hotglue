@@ -1,0 +1,57 @@
+---
+layout: documentation
+---
+
+<h1>Script References</h1>
+
+<h2>Default</h2>
+
+<p>
+    By default, Hotglue loads all references through the web standard script element. Once the files have been processed, Hotglue will replace the script reference with the required script elements.
+</p>
+
+<pre class="brush: csharp">
+    // Asp.net Page
+    <%= HotGlue.Script.Reference("Accounts/app.js") %>
+</pre>  
+
+<pre class="brush: csharp">
+    // Processed Page HTML
+    <script type="text/javascript" src="jQuery.js"></script>
+    <script type="text/javascript" src="plugin.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</pre>  
+
+<h2>LABjs Plug-in</h2>
+
+<p>
+    If you want to change the default Hotglue script references, you can install the LABjs plug-in.
+</p>
+
+<pre class="brush: csharp">
+    // Asp.net Page
+    <%= HotGlue.Script.Reference("Accounts/app.js") %>
+</pre>  
+
+<pre class="brush: csharp">
+    // Processed Page HTML
+    <script>
+        $LAB
+        .script("jQuery.js")
+        .script("plugin.js").wait() // waits here, because app.js requires both jQuery and plugin.js to run
+        .script("app.js");
+    </script>
+</pre>  
+
+<div class="divider_thin"></div>
+
+<div class="text-center">
+    <span class="tf_pagination">
+        <span class="inner">
+            <a class="page_prev page-numbers" href="documentation_compressors.html">&lt; Compressors</a>
+            <a class="page_next page-numbers" href="documentation_compilers.html">Compilers &gt;</a>
+        </span>
+    </span>
+</div>
+
+<div class="divider_thin"></div>

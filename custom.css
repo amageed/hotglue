@@ -1,0 +1,86 @@
+.nuget {
+    margin-bottom: -2px;
+}
+
+.site .nuget-button-command {
+    margin: .6em 2em .6em 0.5em;
+    font-size: 1.2em;
+}
+
+.site .nuget-button-commandWrapper {
+    margin: 0;
+    display: inline-block;
+}
+
+.bottom_1 .container_12, .bottom_2 .container_12 {
+    padding: 0 0 20px 0;
+}
+
+.install-package {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.install-package span {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 1.3em;
+    color: white;
+}
+
+.middle .install-package span {
+    color: black;
+    line-height: 28px;
+}
+
+.middle .install-package span.center {
+    line-height: 48px;
+}
+
+.middle .install-package span.sub {
+    display: block;
+    font-size: 12px;
+    line-height: normal;
+}
+
+.middle .install-package span.sub em {
+    font-weight: bold;
+}
+
+.middle {
+    padding-bottom: 10px;
+}
+
+.sText .slide-descr, .sText .slide-text-left .slide-descr {
+    font-size: 18px;
+}
+
+.sText {
+    top: 25px;
+    height: 450px;
+}
+
+.sText .slides_container, .sText .slide {
+    height: 450px;
+}
+
+.header_slider .container_12 {
+    height: 485px;
+}
+
+.head_title {
+    width: auto;
+}
+
+.header_thin .container_12 {
+    padding-top: 105px;
+    height: 65px;
+}
+
+.next {
+    float: right;
+}
+
+ol, ul {
+    margin-bottom: 15px;
+}

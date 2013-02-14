@@ -1,0 +1,97 @@
+---
+layout: documentation
+---
+
+<h1>Require References</h1>
+
+<p>
+    There are two main functions of the require reference. 
+</p>
+
+<ol>
+    <li>Load a referenced file and parse any sub references</li>
+    <li>Same as #1, but export the required files to a variable</li>
+</ol>
+
+<h2>Load a referenced file</h2>
+
+<p>
+    If you want to reference a child file and load all of its required references, use one of the following options.
+<p>
+
+<pre class="brush: javascript">
+    // The standard require reference path
+    //= require("dialog.js");
+    // or
+    //= require('dialog.js');
+
+    // Referencing a require without quotes
+    //= require dialog.js
+
+    // Referencing a require as an element for resharper support
+    /// &lt;reference path="dialog.js" /&gt;
+
+    // Referencing a require file under a folder
+    //= require("helpers/dialog.js");
+</pre> 
+
+<h2>Load a reference variable file</h2>
+
+<p>
+    If you want to reference a child file and load the referenced file into a variable, use one of the following options.
+</p>
+
+<pre class="brush: javascript">
+    // Require a file and use it as a variable on the page
+    var popup = require("plugins/popup.js");
+
+    // Require a file and use it for an object on the page
+    var helpers = {
+        validations: require("contants.js").validations,
+        message: require("contants.js").messages
+    };
+</pre> 
+
+<p>
+    When you use a variable require reference, the referenced child file needs to specify what is being exported. This is a pattern found in <a href="http://www.commonjs.org/specs/modules/1.0/">CommonJS</a> and <a href="http://nodejs.org/api/modules.html#modules_module_exports">Node.js</a>. To do this, use module.exports at the bottom of your referenced script. In the example below, the isMinLength method is the only object exported. The variable length stays private to the file.
+</p>
+
+<pre class="brush: javascript">
+    // validations.js file
+
+    var length = 10;
+
+    var isMinLength = function(text) {
+        if (!text)
+            return false;
+
+        if (text.length < length) 
+            return false;
+
+        return true;
+    };
+
+    module.exports = minLength;
+</pre> 
+
+<pre class="brush: javascript">
+    // app.js file
+
+    var minLength = require("validations.js");
+    if (!minLength("something"))
+        alert("The text isn't the minimum required length");
+    
+</pre> 
+
+<div class="divider_thin"></div>
+
+<div class="text-center">
+    <span class="tf_pagination">
+        <span class="inner">
+            <a class="page_prev page-numbers" href="documentation_library.html">&lt; Library References</a>
+            <a class="page_next page-numbers" href="documentation_plugins.html">Plug-ins &gt;</a>
+        </span>
+    </span>
+</div>
+
+<div class="divider_thin"></div>

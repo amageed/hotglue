@@ -1,0 +1,69 @@
+---
+layout: documentation
+---
+
+<h1>Frameworks</h1>
+
+<h2>Default</h2>
+
+<p>
+    There is no default framework for Hotglue, you must install one of the plug-ins below that correspond to the project type you are working on. After a framework is installed, you can add additional functionality through additional plug-ins.
+</p>
+
+<p>
+    All framework plug-ins provide the following base functionality:
+</p>
+
+<ul>
+    <li>Parse JavaScript files for dependent file references</li>
+    <li>Cache previously parsed files for faster loading</li>
+    <li>Bundle files together into a single file on release mode</li>
+    <li>Ability to have require reference module files</li>
+</ul>
+
+<h2>Asp.net MVC and Web forms</h2>
+
+<p>
+    To get Hotglue up and running on Asp.net, all you need to do is install the Nuget package and start using it.
+</p>
+
+<p>
+    <div class="install-package">  
+        <pre class="nuget-button">Install-Package HotGlue.Aspnet</pre>
+    </div>
+</p>
+
+<h2>Nancy</h2>
+
+<p>
+    There are two ways to install Hotglue for Nancy. If you are using the Razor view engine install the Razor package. This allows you to reference the same way you do in Asp.Net.
+</p>
+
+<p>
+    <div class="install-package">  
+        <pre class="nuget-button">Install-Package HotGlue.Nancy.Razor</pre>
+    </div>
+</p>
+
+<p>
+    If you are using a different view engine you can install the default Nancy package. For the Super Simple View Engine you'll need to pass in your reference as a variable. Other view engines have not been tested.
+</p>
+
+<p>
+    <div class="install-package">  
+        <pre class="nuget-button">Install-Package HotGlue.Nancy</pre>
+    </div>
+</p>
+
+<div class="divider_thin"></div>
+
+<div class="text-center">
+    <span class="tf_pagination">
+        <span class="inner">
+            <a class="page_prev page-numbers" href="documentation_plugins.html">&lt; Plug-ins</a>
+            <a class="page_next page-numbers" href="documentation_compressors.html">Compressors &gt;</a>
+        </span>
+    </span>
+</div>
+
+<div class="divider_thin"></div>

@@ -1,0 +1,48 @@
+---
+layout: documentation
+---
+
+<h1>Page References Details</h1>
+
+<p>
+    In order to get script references onto your page, you need to reference a script file through the Hotglue library. When you reference a script file, below is a detailed explanation of what happens behind the scenes on a page load.
+</p>
+
+<ol>
+    <li>Find and parse all Hotglue <em>library</em> and <em>require</em> references</li>
+    <li>Build a list of all required files, by going through the reference dependency chain</li>
+    <li>Remove any duplicate <em>library</em> and <em>require</em> references</li>
+    <li>Ensure there aren't any circular references</li>
+    <li>Order references to load from no required child references, to no parent references</li>
+    <li>Generate all script references and write them to the page</li>
+</ol>
+
+<p>
+    After this process has happened for the first time, the found references and any compiled scripts are cached. On subsequent page loads, the cached versions are served up. If any of the files have changed since they were last cached, the process starts again listed above.
+</p>
+
+<h1>Single Page Reference</h1>
+
+<p>
+    Hotglue works best, at the moment, when there is a single page reference. This is because of how Hotglue processes each referenced file. If you added more than one <em>js</em> reference files at the moment, the process listed above would be repeated for each referenced file. This could lead to duplicate scripts since each referenced file is processed separately. The best solution is to put all required references under a single script file and handle everything within that file.
+</p>
+
+<pre class="brush: csharp">
+    // Asp.net Page with two references could lead to duplicate script references
+    // A better solution is to include a require reference to dialog.js in app.js
+    <%= HotGlue.Script.Reference("Accounts/app.js") %>
+    <%= HotGlue.Script.Reference("Accounts/dialog.js") %>
+</pre>  
+
+<div class="divider_thin"></div>
+
+<div class="text-center">
+    <span class="tf_pagination">
+        <span class="inner">
+            <a class="page_prev page-numbers" href="documentation_components.html">&lt; Components</a>
+            <a class="page_next page-numbers" href="documentation_library.html">Library References &gt;</a>
+        </span>
+    </span>
+</div>
+
+<div class="divider_thin"></div>

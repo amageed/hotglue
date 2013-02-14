@@ -1,0 +1,50 @@
+---
+layout: documentation
+---
+
+<h1>Library References</h1>
+
+<p>
+    Whenever you reference a library file, the referenced file is loaded as is and not parsed for additional reference tags. There are multiple ways you can reference a library file. Below is a variety of ways you can reference a library file. 
+</p>
+
+<pre class="brush: javascript">
+    // The standard library reference path
+    //= library("jquery.js");
+    // or 
+    //= library('jquery.js');
+
+    // Referencing a library without quotes
+    //= library jquery.js
+
+    // Referencing a library as an element for resharper support
+    /// &lt;reference path="jquery.js" library/&gt;
+
+    // Referencing a library file under a folder
+    //= library("libraries/jquery.js");
+</pre> 
+
+<p>
+    If you need to reference a library in another language (i.e. CoffeeScript), all you need to do is replace the comment character with the comment character in the target language. Using the first example from above.
+</p>
+
+<pre class="brush: javascript">
+    // The standard library reference path in JavaScript
+    //= library("jquery.js");
+
+    // The standard library reference path in CoffeeScript
+    #= library("jquery.js");
+</pre> 
+
+<div class="divider_thin"></div>
+
+<div class="text-center">
+    <span class="tf_pagination">
+        <span class="inner">
+            <a class="page_prev page-numbers" href="documentation_page.html">&lt; Page References</a>
+            <a class="page_next page-numbers" href="documentation_require.html">Require References &gt;</a>
+        </span>
+    </span>
+</div>
+
+<div class="divider_thin"></div>

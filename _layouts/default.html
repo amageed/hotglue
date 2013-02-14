@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Hotglue - 
+    {% if page.title %}
+        {{ page.title }}
+    {% else %}
+        Seamless File Dependency Graphing
+    {% endif %}
+    </title>
+    <meta name="author" content="Aaron Hansen" />
+    <meta name="description" content="Hotglue is a .net plugin to reference, compile, and compress a variety of front end libraries and languages" />
+    <meta name="keywords" content=".net c# visualstudio hotglue opensource javascript coffeescript template engine compresss compile reference" />
+
+    <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="styles/green.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" language="javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript" src="js/general.js"></script>
+    <script type="text/javascript" src="js/preloadCssImages.js"></script>
+    <script type="text/javascript" language="javascript" src="js/jquery.tools.min.js"></script>
+
+    <script type="text/javascript" language="javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" language="javascript" src="js/slides.jquery.js"></script>
+
+    <script type="text/javascript" language="javascript" src="js/shCore.js"></script>
+    <script type="text/javascript" language="javascript" src="js/shBrushPlain.js"></script>
+    <script type="text/javascript" language="javascript" src="js/shBrushCSharp.js"></script>
+    <script type="text/javascript" language="javascript" src="js/shBrushJScript.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/shCore.css" />
+    <link rel="stylesheet" type="text/css" href="css/shThemeDefault.css" />
+
+    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="images/skins/tango/skin.css" />
+
+    <script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" />
+    <script type="text/javascript" language="javascript" src="js/custom.js"></script>
+    <script type="text/javascript">
+        (function () {
+            var nb = document.createElement('script'); nb.type = 'text/javascript'; nb.async = true;
+            nb.src = 'http://s.prabir.me/nuget-button/0.2.1/nuget-button.min.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(nb, s);
+        })();
+    </script>
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="css/ie.css" />
+    <![endif]-->
+    <link href="custom.css" media="screen" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body class="site">
+
+<a href="https://github.com/sprucemedia/hotglue" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:5000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+
+<div class="head_bar">
+    <div class="container_12">
+        <div class="logo"><a href="index.html"><img src="images/logo.png" alt="" width="255" height="42" border="0" /></a></div>
+        <div class="topmenu">
+            {% include links.html %}
+        </div>
+    </div>
+</div>
+
+<!-- content -->
+{{ content }}
+<!--/ content -->
+
+<!-- bottom content -->
+{% include install.html %}
+<!--/ bottom content -->
+
+<!-- footer content -->
+<div class="footer">
+    <div class="container_12">
+        
+        <div class="row">
+            <div class="col col_1_4">
+                <h4 class="title_contact">Contact us:</h4>
+                <div class="address_text">
+                </div>
+            </div>
+            
+            <div class="col col_1_4">
+                <h4>On Github</h4>
+                <div class="extract_text">
+                <p>Contact <a href="https://github.com/aaronbhansen" target="_blank">Aaron</a> or <a href="https://github.com/nathanpalmer" target="_blank">Nathan</a> on github. You can view all contributors <a href="contribute.html" target="_blank">here</a>.</p>
+                </div>
+            </div>
+            
+            <div class="col col_1_4">
+                <h4>On Social Media</h4>
+                <div class="extract_text">
+                <p>View Aaron's profile on <a href="http://www.linkedin.com/in/aaronbhansen" target="_blank">LinkedIn</a> or message on <a href="https://twitter.com/aaronbhansen" target="_blank">Twitter</a>.</p>
+                <p>View Nathans profile on <a href="http://www.linkedin.com/in/nathanericpalmer" target="_blank">LinkedIn</a> or message on <a href="https://twitter.com/nathanpalmer" target="_blank">Twitter</a>.</p>
+                </div>
+            </div>
+
+            <div class="col col_1_4">
+                <h4>Spruce Media</h4>
+                <div class="extract_text">
+                    <p>The Facebook ads/marketing company we work for. View their <a href="http://www.sprucemedia.com">web page</a>.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="row">
+            <div class="col col_1_4">
+                <div class="copyright">
+                    <p>HotGlue &copy;  2013. All rights reserved</p>
+                </div>
+            </div>
+        </div>            
+        
+        
+        <div class="clear"></div>        
+    </div>
+</div>
+<!--/ footer content -->
+
+</body>
+</html>

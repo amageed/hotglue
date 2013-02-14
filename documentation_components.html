@@ -1,0 +1,102 @@
+---
+layout: documentation
+---
+
+<h1>Components</h1>
+
+<p>
+    Hopefully from the quick start documentation you were able to see that getting Hotglue up and running should be fairly easy. Now lets go over some of the options you have available to use with Hotglue.
+</p>
+
+<h1>File Dependency Graphing</h1>
+
+<p>
+    One of the main features of Hotglue, is finding and loading all required files dynamically through file references. There are two kinds of references available in Hotglue to you in your scripts, they are <em>Library</em>, and <em>Require</em>. The way Hotglue knows how to initially load this references is through the page reference.
+</p>
+
+<h3>Page Reference</h3>
+
+<p>
+    Each page should have one main file to load. This file then has additional dependencies to load, but as far as your page reference is concerned, there is only one point of entry. This can be named what ever you would like, but it is assumed that the file you are loading is referenced under your <em>/Scripts</em> folder in your web project. 
+</p>
+
+<p>
+    Everything in Hotglue is assumed to be a relative path unless it starts with / or ~/. If you wanted to load <em>app.js</em> and it was in the path <em>Scripts/Accounts/app.js</em>, it would be referenced like this:
+</p>
+
+<pre class="brush: csharp">
+    // Asp.net Page
+    <%= HotGlue.Script.Reference("Accounts/app.js") %>
+</pre>  
+
+<p>
+    As far as referencing a script in your page, this is all you would need to do. Hotglue will traverse and find all the required references for you automatically. 
+</p>
+
+<p>
+    <a href="documentation_page.html">Learn more about page references</a>
+</p>
+
+<h3>Library Script References</h3>
+
+<p>
+    The first method to load scripts is through the <em>Library</em> method. When loading other scripts with the library method, the scripts are loaded as is and not checked for additional references. It is recommended that you load all third-party scripts with this method. 
+</p>
+
+<p>
+    The patterns for loading a reference are pretty flexible. The default reference is below. 
+</p>
+
+<pre class="brush: javascript">
+    //= library("jquery.js");
+</pre> 
+
+<p>
+    <a href="documentation_library.html">Learn more about library references</a>
+</p>
+
+<h3>Require Script References</h3>      
+<p>
+    The second method to load scripts is through the <em>Require</em> method. This method is where the real power of Hotglue comes into play. There are three different ways to use require references.
+</p>
+
+<pre class="brush: javascript">
+    // Require a file and all of its sub files
+    //= require("includes.js");
+
+    // Require a file and use it as a variable on the page
+    var popup = require("plugins/popup.js");
+
+    // Require a file and use it for an object on the page
+    var helpers = {
+        validations: require("contants.js").validations,
+        message: require("contants.js").messages
+    };
+</pre> 
+
+<p>
+    If you use the variable reference method you need to treat that file as a module and export what you need from it. For specifics on this, view more on required references.
+</p>
+
+<p>
+    <a href="documentation_require.html">Learn more about require references</a>
+</p>
+
+<h3>File Bundling</h3>
+
+<p>
+    Hotglue has built-in bundling to combine all of the referenced Hotglue files into one. The bundling works automatically based on the <em>Debug</em> or <em>Release</em> setting in your project. For an Asp.net project, this means the Web.config attribute is set to debug="false" to bundle all of the files. When debug is set to true, all of referenced script files will load individually. 
+</p>
+
+<div class="divider_thin"></div>
+
+<div class="text-center">
+    <span class="tf_pagination">
+        <span class="inner">
+            <a class="page_prev page-numbers" href="documentation.html">&lt; Quick Start</a>
+            <a class="page_next page-numbers" href="documentation_plugins.html">Plug-ins &gt;</a>
+        </span>
+    </span>
+</div>
+
+<div class="divider_thin"></div>
