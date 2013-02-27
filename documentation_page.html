@@ -21,17 +21,32 @@ layout: documentation
     After this process has happened for the first time, the found references and any compiled scripts are cached. On subsequent page loads, the cached versions are served up. If any of the files have changed since they were last cached, the process starts again listed above.
 </p>
 
-<h1>Single Page Reference</h1>
+<h1>Script Reference</h1>
 
 <p>
-    Hotglue works best, at the moment, when there is a single page reference. This is because of how Hotglue processes each referenced file. If you added more than one <em>js</em> reference files at the moment, the process listed above would be repeated for each referenced file. This could lead to duplicate scripts since each referenced file is processed separately. The best solution is to put all required references under a single script file and handle everything within that file.
+    Hotglue works best, at the moment, when there is a single call to <code>HotGlue.Script.Reference</code>. However, you can include multiple files in that single call.
 </p>
 
 <pre class="brush: csharp">
-    // Asp.net Page with two references could lead to duplicate script references
-    // A better solution is to include a require reference to dialog.js in app.js
-    <%= HotGlue.Script.Reference("Accounts/app.js") %>
-    <%= HotGlue.Script.Reference("Accounts/dialog.js") %>
+    <%= HotGlue.Script.Reference("Accounts/app.js", "Accounts/dialog.js") %>
+</pre>  
+
+<p>
+    This will generate a complete <code>&lt;script&gt;</code> tag.
+</p>
+
+<p>
+    You can optionally remove the surrounding tag and reference code if you'd prefer to write this yourself by passing a <code>HelperOptions</code> object.
+</p>
+
+<pre class="brush: javascript">
+    <script type="text/javascript">
+        $LAB // Must add reference manually when GenerateHeaderAndFooter = false
+        <%: HotGlue.Script.Reference(new HotGlue.Model.HelperOptions { GenerateHeaderAndFooter = false }, "global.js") %>
+            .wait(function () {
+                // some custom JS code we need to include
+            });
+    </script>
 </pre>  
 
 <div class="divider_thin"></div>
